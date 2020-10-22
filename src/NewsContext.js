@@ -12,7 +12,7 @@ export const NewsContextProvider = (props) => {
   // const [postsPerPage,setPostsPerPage]= useState(5);
   const apiKey = "29160c2eda124512a196ab00de96775b";
 
-  useEffect(() => {
+  useEffect(() => { 
     axios
       .get(
         `https://newsapi.org/v2/top-headlines?country=us&apiKey=${apiKey}`
@@ -20,13 +20,15 @@ export const NewsContextProvider = (props) => {
       .then((response) => setData(response.data))
       .catch((error) => console.log(error));
   }, [data]);
-
+  // console.log(data.length);
 
   // const indexOfLastPost = currentPage * postsPerPage;
-  // const indexOfFirstPost = indexOfLastPost -postsPerPage;
+  // const indexOfFirstPost = indexOfLastPost - postsPerPage;
   // const currentPosts = data.slice(indexOfFirstPost,indexOfLastPost);
+
 
   return (
     <NewsContext.Provider value={{data}}>{props.children}</NewsContext.Provider>
+    
   );
 };

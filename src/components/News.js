@@ -8,6 +8,7 @@ import Pagination, { usePagination } from "./Pagination";
 function News(){
 
     const {data}=useContext(NewsContext);
+    
 
     return <div>
         <div className="all__news">
