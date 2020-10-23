@@ -94,4 +94,18 @@ ul {
     
 }
 
+.search{
+    margin-top: 20px;
+ 
+}
+.search-text{
+    width: 60%;
+    padding: 10px;
+    margin-left: 20%;
+}
+.hr-line{
+    margin-top: 20px;
+    /* border: px solid; */
+}
+
 
