@@ -10,9 +10,12 @@ function News(){
 
     const {data}=useContext(NewsContext);
     // console.log(data);
+    function onSearch(){
+        return console.log("test");
+    }
 
     return <div>
-        <SearchArticles onSearch={data}/>
+        <SearchArticles onSearch={onSearch}/>
         <div className="all__news">
         {data ? data.articles.map((news,index) => 
             
